@@ -11,6 +11,12 @@ var store = [{
         "url": "/jekyll/github-pages/",
         "teaser": null
       },{
+        "title": "[git] overview",
+        "excerpt":"git branch (-m | -M) [&lt;oldbranch&gt;] &lt;newbranch&gt; &lt;oldbranch&gt; will be renamed to &lt;newbranch&gt; git default branch name is master cd to-your-dir git init git add * git commit -m \"message\" git branch -M main git remote add origin your-repo-addr git push origin main .git git info is contained in this...","categories": ["git"],
+        "tags": ["git"],
+        "url": "/git/git/",
+        "teaser": null
+      },{
         "title": "[fd] commands",
         "excerpt":"Find directories only   fd -t d file_name  ","categories": ["linux"],
         "tags": ["fd"],
