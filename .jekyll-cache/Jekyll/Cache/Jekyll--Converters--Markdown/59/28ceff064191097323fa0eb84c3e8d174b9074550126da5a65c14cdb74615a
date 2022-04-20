@@ -1,4 +1,0 @@
-I"Â<p>Find directories only</p>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fd <span class="nt">-t</span> d file_name
-</code></pre></div></div>
-:ET
