@@ -4,3 +4,7 @@
 .sass-cache
 _asset_bundler_cache
 _site
+
+# tmux
+tmux-client*
+tmux-server*
