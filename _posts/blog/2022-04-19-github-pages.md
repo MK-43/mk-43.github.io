@@ -34,6 +34,22 @@ Using the `default` key in `_config.yml` you could set the layout for all posts
 
 ## jekyll
 
+### installation
+```bash
+sudo apt install ruby-full build-essential zlib1g-dev
+
+echo '# Install Ruby Gems to ~/gems' >> ~/.zshrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.zshrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+
+gem install jekyll bundler
+
+bundle install # install dependencies specified in your gem file
+
+jekyll serve
+```
+
 run jekyll server with my IP
 
 ```bash
