@@ -47,3 +47,16 @@ $$
 
 
 ### ROC curve
+
+Receiver Operating Characteristic curve plots the *true positive rate(recall)* against *false positive rate (FPR)*
+
+$$
+  FPR = 1 - \frac{1}{\text{true negative rate (TNR)}}
+$$
+
+FPR: the ratio of negative instances that are incorrectly classified as **positive**  
+TNR(specificity): the ratio of negative instances that are correctly classified as **negative**
+
+the ROC curve plots *sensitivity(recall)* versus 1-*specificity*
+
+
