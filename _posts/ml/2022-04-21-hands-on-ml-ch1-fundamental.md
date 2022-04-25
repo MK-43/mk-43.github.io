@@ -63,7 +63,8 @@ last_modified_at: 2022-04-21
 #### Batch learning
 
 it must be trained using **all the available data**  
-1. the system is learned
+
+1. the system is learned  
 2. it is launched into production and runs without learning anymore
 called *offline learning*
 
