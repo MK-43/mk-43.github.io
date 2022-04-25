@@ -1,5 +1,5 @@
 ---
-title:  "[ml] ch.2 End-to-End Machine Learning Project"
+title:  "[ml] ch.1 The Fundamentals of Machine Learning"
 excerpt: ""
 
 categories:
@@ -15,76 +15,63 @@ last_modified_at: 2022-04-21
 ---
 ### The main steps
 
-[1. Look at the big picture](#1-look-at-the-big-picture)
+### Supervised/Unsupervised learning
 
-[2. Get the data](#2-get-the-data)
+#### Supervised learning
 
-[3. Discover and visualizethe data to gain insights](#3-discover-and-visualizethe-data-to-gain-insights)
+- **classification**
 
-[4. Prepare the data for machine learning algorithms](#4-prepare-the-data-for-machine-learning-algorithms)
+- **Regression**: given a set of *features* called *predictors*, predict a *target* numeric value  
+  - **logistic regression**: commonly used for classification
+- K-Nearest Neighbors  
+- Linear Regression  
+- Support Vector Machines(SVMs)  
+- Decision tress and random forests  
+- Neural networks
 
-[5. Select a model and train it](#5-select-a-model-and-train-it)
+#### Unsupervised learning
 
-[6. Fine-tune your model](#6-fine-tune-your-model)
+- Clustering  
+  - K-Means
+  - DBSCAN
+  - Hierarchical Cluster Analysis (HCA)
+- Anomaly detection and novelty detection
+  - One-class SVM
+  - Isolation Forest
+- Visualization and dimensionality reduction
+  - Principal Component Analysis (PCA)
+  - Kernel PCA
+  - Locally Linear Embedding (LLE)
+  - t-Distributed Stochastic Neighbor Embedding (t-SNE)
+- Association rule learning
+  - Apriori
+  - Eclat
 
-[7. Present your solution](#7-present-your-solution)
+  > Visualization algorithms try to preserve as much structure as they can (e.g., trying to keep separate clusters in the input space from overlapping in the visualization)
 
-[8. Launch, monitor, and maintain your system](#8-launch-monitor-and-maintain-your-system)
+**dimensionality reduction**: to simplify the data without losing too much information
+- merge several correlated features into one
+- feature extraction
 
 
-### 1. Look at the big picture
+### Semisupervised learning
 
-- Frame the problem  
-  -\. know the business objective  
+### Reinforcement learning
 
-> **a data *pipeline***: a sequence of data processing components
+### Batch and online learning
 
-- Select a performance measure
-  - RMSE(Root Mean Square Error)
-    - generally preferred performance measure for regression tasks
-  - MAE(Mean Absolute Error)
-$$
-    RMSE(X,h) = \sqrt{\frac{1}{m}{\sum_{i=1}^{m}{(h(x^{(i)})-y^{(i)})^2}}}
-$$
-$$
-    MAE(X,h) = \frac{1}{m}\sum_{i=1}^{m}{|{h(x^{(i)}) - y^{(i)}}|}
-$$
+#### Batch learning
 
-outliers 많음 &rarr; MAE  
-outliers 적음 &rarr; RMSE  
-sqr가 들어가면서 큰 값은 더 커지고, 작은 값은 더 작아져서
- 
- - check the assumptions
+it must be trained using **all the available data**  
+1. the system is learned
+2. it is launched into production and runs without learning anymore
+called *offline learning*
 
-### 2. Get the data
+#### online learning
 
-- Take a quick look at the data structure  
-- Create a test set
-  - Don't do *data snooping*
-  - typically 20% of the datset  
-  - *strata*: homogeneous subgroups &rarr; *stratified sampling*
-    - the test set should be representative of the overall population 
+you train the system incrementally by feeding it data instances sequentially, either individually or in small groups called *mini-batches*
 
-### 3. Discover and visualizethe data to gain insights
+- great for systems that receive data as a continuous flow (e.g., stock prices) and need to adapt to change rapidly or autonomously
+- can be used to train systems on huge datasets that cannot fit in one machines' main memory (called *out-of-core learning*)
 
-- Visualizing geographical data  
-- Looking for correlations  
-- Experimenting with attirbute combinations  
-
-### 4. Prepare the data for machine learning algorithms
-
-- Data cleaning  
-  - one-hot encoding  
-- Handling text and categorical attributes  
-- Custom transformers  
-- **Feature scaling**  
-  - min-max scaling(normalization)  
-  - standardization  
-
-### 5. Select a model and train it
-
-### 6. Fine-tune your model
-
-### 7. Present your solution
-
-### 8. Launch, monitor, and maintain your system
+*learning rate*: how fast a learning system should adapt to chaning data

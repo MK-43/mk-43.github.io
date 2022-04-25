@@ -84,9 +84,13 @@ sqr가 들어가면서 큰 값은 더 커지고, 작은 값은 더 작아져서
 ### 5. Select a model and train it
 
 - Training and evaluating on the training set
-- Better evaluation using cross-validation
-  - split the training set into some distict subsets called *folds* 
-  - [test](https://velog.velcdn.com/images/mk-43/post/61b56938-c2bb-4c2a-b317-5f9b66ae8259/image.png)
+- Better evaluation using *K-fold cross-validation*
+  - split the training set into some K-distict subsets called *folds*  
+  - pick a different fold for evaluation every time and train on the other K-1 folds  
+  - try out many other models without spending too much time tweaking the hyperparameters
+  - **the goal is to shortlist a few (two to five) promising models**
+
+> *Ensemble Learning*: building a model on top of many other models
 
 ### 6. Fine-tune your model
 
