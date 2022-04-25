@@ -94,6 +94,18 @@ sqr가 들어가면서 큰 값은 더 커지고, 작은 값은 더 작아져서
 
 ### 6. Fine-tune your model
 
+- fiddle with the hyperparameters manually  
+- use GridSearchCV
+- Radomized search: instead of trying out all possible combinations, evaluate a given number of random combinations by selecing a random value for each hyperparameter at every iteration  
+- Ensemble methods: try to combine the models that perform best
+- Analyze the best models and their errors
+  - fix it by adding extra feature or getting rid of uninformative ones, cleaning up outliers, etc.
+- evalue your system on the test set
+
 ### 7. Present your solution
 
 ### 8. Launch, monitor, and maintain your system
+
+- deploy  
+- monitor code to check your system's live performance at regular intervals  
+  - models tend to rot over time.
