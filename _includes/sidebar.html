@@ -50,6 +50,13 @@
                 {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+              {% for category in site.categories %}
+              {% if category[0] == "linux" %}
+              <li><a href="/categories/ml" class="">linux({{category[1].size}})</a></li>
+              {% endif %}
+              {% endfor %}
+          </ul>
         </li>
         <li>
             <br>
