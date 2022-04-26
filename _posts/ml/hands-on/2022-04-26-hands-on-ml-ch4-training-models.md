@@ -82,3 +82,123 @@ picks a random instance(can vary) in the training set at every step and computes
 the cost function will bounce up and down, decreasing only on average.
 
 epoch
+
+### Mini-batch Gradient Descent
+
+computes the gradients on small random sets of instances called *mini-batch*  
+
+Batch GD stops at the minimum,  
+But both stochastic GD and Mini-batch GD continue to walk around
+
+|GD|training set|at the minimum|
+|---|---|---|
+|Batch GD| full training set| stops at the minimum|
+|Stochastic GD| just one instance | keeps walking around|
+| Mini-batch GD| small random sets of instances|keeps walking around|
+
+➜ gradually reduce the learning rate during training to avoid GD from bouncing around the optimum at the end
+
+### Polynomial Regression
+
+For non-linear model, add powers of each feature as new features
+
+> ❓ Polynomial Regression is capable of finding relationships between features
+
+### Learning Curve
+
+plots of the model's performance on the training set and the validation set as a function of the training set size ➜ $f(\text{training set size})$
+
+| |training data| validation data|
+|---|---|---|
+|overfitting|performs well|generalizes poorly|
+|underfitting|poorly|poorly|
+
+**underfitting**
+![underfitting](https://velog.velcdn.com/images/mk-43/post/ea798f51-ea47-48ab-9440-523195dcdce9/image.png)
+
+**overfitting**  
+![overfitting](https://velog.velcdn.com/images/mk-43/post/5143b296-c028-443f-824b-a73856d6c5be/image.png)
+
+> ❓ bias, variance, irreducible error
+
+Bias  
+This part of the generalization error is due to wrong assumptions,
+such as assuming that the data is linear when it is actually quadratic.
+A high-bias model is most likely to underfit the training data.
+
+Variance  
+This part is due to the model’s excessive sensitivity to small
+variations in the training data. A model with many degrees of
+freedom (such as a high-degree polynomial model) is likely to have
+high variance and thus overfit the training data.
+
+Irreducible error  
+This part is due to the noisiness of the data itself. The only way to
+reduce this part of the error is to clean up the data (e.g., fix the data
+sources, such as broken sensors, or detect and remove outliers).
+Increasing a model’s complexity will typically increase its variance and
+reduce its bias. Conversely, reducing a model’s complexity increases its
+bias and reduces its variance. This is why it is called a trade-off.
+
+### Regularized Linear Models
+
+regularize(constrain) the model (규제 선형 회귀)
+degree of freedom &darr; ➜ overfitting &darr;  
+reduce the number of polynomial degress
+
+> training에 쓰이는 cost function과 testing에 쓰이는 함수가 보통 다르다
+> 1. for regularization  
+> 2. 최종 testing의 경우, 최종 목적에 따라 다르게 지표를 설정하기 때문.  
+> 가령, log loss함수로 학습하고, 최종에서는 precision/reacall을 사용
+
+cost함수 = 학습데이터 잔차 오류 최소화 + 회귀계수 크기 제어
+
+alpha값을 크게 하면 weight을 줄여서라도 전체 값을 낮추려고 한다 ➜ 변수 줄임
+
+#### Ridge Regression
+
+use $l_{2}$ norm 
+
+#### Rasso
+
+use $l_{1}$ norm
+
+#### Elastic Net
+
+a middle ground between Ridge and Lasso
+
+#### Early Stopping
+
+stop training as soon as the validation error reaches a minimum
+
+### Logistic Regression
+
+used to estimate the probability that an instance belongs to a particular class  
+$$
+  \hat{p} = h_{\theta}(x) = \sigma(x^{T}\theta)
+$$
+$$
+  \sigma(t) = \frac{1}{1+exp(-t)}
+$$
+
+the score *t* is often called the *logit*.  
+logit function $logit(p) = log(p/(1-P))$ is the inverse of the logistic function.  
+
+![logistic-function](https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Logistic-curve.svg/640px-Logistic-curve.svg.png?1651011186528)
+
+#### Training and Cost Function
+
+to set the parameter vector $\theta$ so that the model estimates high probabilities for positive instances ($y=1$) and low probabilities for negative instances($y=0$)
+
+[//]: <TODO: fix it>
+$$
+\begin{equation}
+  c(\theta) = \begin{cases}
+                -log(\hat{p}), & \text{if}\ y=1 \\
+                -log(1-\hat{p}), & \text{if}\ y=0 \\
+              \end{cases}
+\end{equation}
+$$
+
+### Softmax Regression
+

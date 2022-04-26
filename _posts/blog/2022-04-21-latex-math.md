@@ -32,3 +32,8 @@ $$
 $$
     \theta^{(\text{next step})} = \theta - \eta\nabla_{\theta}MSE(\theta)
 $$
+
+hat
+$$
+  \hat{p} = h_{\theta}(x) = \sigma(x^{T}\theta)
+$$
