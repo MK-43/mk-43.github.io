@@ -64,3 +64,29 @@ bundle exec jekyll serve --host={my_ip}
 
 ### Gemfile
 
+### How to use LaTex on github pages + minimal mistakes + MathJax
+
+[Ref](https://kevinfossez.github.io/posts/2020/04/blog-post-1/)
+
+`_includes/head/custom.html`
+
+```html
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\(","\\)"] ],
+    },
+    TeX: {
+      Macros: {
+        bra: ["\\langle{#1}|", 1],
+        ket: ["|{#1}\\rangle", 1],
+        braket: ["\\langle{#1}\\rangle", 1],
+        bk: ["\\langle{#1}|{#2}|{#3}\\rangle", 3]
+     }
+   }
+  });
+</script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML' async></script>
+```

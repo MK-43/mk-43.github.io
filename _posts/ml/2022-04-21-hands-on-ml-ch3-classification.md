@@ -45,7 +45,6 @@ $$
     F1 = \frac{2}{\frac{1}{precision} + \frac{1}{recall}} = 2\times \frac{precision\times recall}{precision + recall}
 $$
 
-
 ### ROC curve
 
 Receiver Operating Characteristic curve plots the *true positive rate(recall)* against *false positive rate (FPR)*
@@ -59,4 +58,20 @@ TNR(specificity): the ratio of negative instances that are correctly classified 
 
 the ROC curve plots *sensitivity(recall)* versus 1-*specificity*
 
+AUC: Area Under the Curve
 
+### Multiclass classification
+
+Multiclass algorithms: SGD classifiers, Random Forest classifiers, and naive Bayes classifiers  
+Binary classifiers: Logistic Regression, SVM
+
+*one-versus-the-rest* (OvR): train 10 binary clasifiers and pick one whose classifier outputs the highest score.
+
+*one-versus-one* (OvO): train a binary classifier for every pair of digits($N\times(N-1) / 2$)  
+
+
+### Multilabel classification
+
+outputs multiple binary tags
+
+### mult
