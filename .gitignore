@@ -1,0 +1,15 @@
+# Jekyll generated files
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+_asset_bundler_cache
+_site
+robots.txt
+
+# tmux
+tmux-client*
+tmux-server*
+
+# Ruby Gem
+*.gem
+.bundle
