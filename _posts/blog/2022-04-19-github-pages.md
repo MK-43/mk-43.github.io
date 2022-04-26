@@ -14,6 +14,9 @@ date: 2022-04-19
 last_modified_at: 2022-04-19
 ---
 
+[Ref](https://ansohxxn.github.io/categories/blog/)
+[minimal-mistakes](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)
+
 ### _posts
 
 포스트는 바로 최상단 아래 `_post` 카테고리에 존재해야 함.
@@ -35,6 +38,7 @@ Using the `default` key in `_config.yml` you could set the layout for all posts
 ## jekyll
 
 ### installation
+
 ```bash
 sudo apt install ruby-full build-essential zlib1g-dev
 
@@ -55,3 +59,4 @@ run jekyll server with my IP
 ```bash
 bundle exec jekyll serve --host={my_ip}
 ```
+

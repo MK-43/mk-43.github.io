@@ -5,6 +5,7 @@
 .sass-cache
 _asset_bundler_cache
 _site
+robots.txt
 
 # tmux
 tmux-client*
