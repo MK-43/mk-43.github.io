@@ -40,7 +40,7 @@ $$
 
 *F1 score*: harmonic mean of precision and recall  
 *harmonic mean* gives much more weight to low value  
-Thus, both reacll and precision &uarr; \-> F1 &uarr;
+Thus, both reacll and precision &uarr; &rarr; F1 &uarr;
 $$
     F1 = \frac{2}{\frac{1}{precision} + \frac{1}{recall}} = 2\times \frac{precision\times recall}{precision + recall}
 $$
@@ -62,6 +62,7 @@ AUC: Area Under the Curve
 
 ### Multiclass classification
 
+can distinguish between more than two classes  
 Multiclass algorithms: SGD classifiers, Random Forest classifiers, and naive Bayes classifiers  
 Binary classifiers: Logistic Regression, SVM
 
@@ -74,4 +75,6 @@ Binary classifiers: Logistic Regression, SVM
 
 outputs multiple binary tags
 
-### mult
+### Multioutput classification
+
+each label can be multiclass

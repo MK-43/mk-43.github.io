@@ -16,6 +16,8 @@ last_modified_at: 2022-04-19
 
 [Ref](https://ansohxxn.github.io/categories/blog/)
 [minimal-mistakes](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)
+[inline math](https://tex.stackexchange.com/questions/27633/mathjax-inline-mode-not-rendering)
+[inline math should have no space](https://www.overleaf.com/learn/latex/Mathematical_expressions)
 
 ### _posts
 
@@ -74,7 +76,7 @@ bundle exec jekyll serve --host={my_ip}
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
-      inlineMath: [ ['$$','$$'], ["\\(","\\)"] ],
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       displayMath: [ ['$$','$$'], ["\\(","\\)"] ],
     },
     TeX: {
