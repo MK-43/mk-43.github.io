@@ -9,7 +9,7 @@ tags:
 
 toc: true
 toc_sticky: true
-use_math: true
+# use_math: true
  
 date: 2022-04-26
 last_modified_at: 2022-04-26
@@ -69,15 +69,16 @@ $$
 
 #### how to find a good learning rate?
 
-grid serach
+Use grid serach
+
+#### 
 
 1. set a very large number of iterations  
 2. interrupt the algorithm when the gradient vector becomes tiny  
 
-<!-- TODO: fix it -->
-$
-|norm|<\epsilon
-$ &rarr; stop!
+<!-- TODO: Fix inline  -->
+$|norm|<\epsilon$ 
+➜ stop!
 
 ### Stochastic Gradient Descent
 
