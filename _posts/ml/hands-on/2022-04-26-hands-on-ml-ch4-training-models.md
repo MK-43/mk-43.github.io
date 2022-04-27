@@ -9,6 +9,7 @@ tags:
 
 toc: true
 toc_sticky: true
+use_math: true
  
 date: 2022-04-26
 last_modified_at: 2022-04-26
@@ -60,7 +61,6 @@ training a model &rarr; searching for a combination of model parameters that min
 
 it uses the whole batch of training data at every step.  
 GD is faster than Normal equation or SVD decomposition.
-
 $$
     \theta^{(\text{next step})} = \theta - \eta\nabla_{\theta}MSE(\theta)
 $$
@@ -72,7 +72,9 @@ grid serach
 1. set a very large number of iterations  
 2. interrupt the algorithm when the gradient vector becomes tiny  
 
-$|norm|<\epsilon$ &rarr; stop!
+$
+|norm|<\epsilon
+$ &rarr; stop!
 
 ### Stochastic Gradient Descent
 
@@ -173,12 +175,23 @@ stop training as soon as the validation error reaches a minimum
 
 ### Logistic Regression
 
-used to estimate the probability that an instance belongs to a particular class  
+used to estimate the probability that an instance belongs to a particular class ➜ binary classifier  
+
+$$
+\begin{equation}
+    \hat{y} = \begin{cases}
+        0 & \text{if}\ \hat{p} < 0.5 \\
+        1 & \text{if}\ \hat{p} \ge 0.5 \\
+    \end{cases}
+\end{equation}
+$$
+
 $$
   \hat{p} = h_{\theta}(x) = \sigma(x^{T}\theta)
 $$
+
 $$
-  \sigma(t) = \frac{1}{1+exp(-t)}
+  \sigma(t) = \frac{1}{1+\text{exp}(-t)}
 $$
 
 the score *t* is often called the *logit*.  
@@ -200,5 +213,46 @@ $$
 \end{equation}
 $$
 
-### Softmax Regression
+Logistic Regression cost function (*log loss*)  
+Cost function is convex ➜ guaranteed to find the global minimum
 
+#### Decision boundary
+
+y=0과 y=1을 가르는 경계선  
+![decision_boundary](https://wikidocs.net/images/page/4288/logreg303.PNG)
+
+decision boundary는 $\theta$에 의해 결정 됨.
+
+### Softmax Regression (Multinomial Logistic Regression)
+
+The logistic regression model that is generalized to support multiple classes directly ➜ 다중 클래스 분류
+
+가령, 각 클래스에 시그모이드 함수를 적용하면 p(A)=0.8, p(B)=0.2, p(C)=0.4라고 했을 때  
+이것들을 총 합이 1인 예측값을 얻도록 바꾸는 것
+
+1. computes a score $s_{k}(x)$ for each class k,
+2. estimates the probability of each class by applying the softmax function  
+
+**score** $s_{k}(x) = x^{T}\theta^{(k)}$
+
+$$
+\hat{p}_{k} = \sigma(s(x))_k = \frac{\text{exp}(s_{k}(x))}{\sum_{j=1}^{k}\text{exp}(s_{j}(x))}
+$$
+
+> 분류하고자 하는 클래스가 K개 있을 때, K차원의 벡터를 입력 받아 모든 벡터의 원소의 값을 [0, 1] 값으로 변경하여 다시 K차원의 벡터를 반환한다.  
+> ![softmax_img](https://vitalflux.com/wp-content/uploads/2020/10/Softmax-Function-1024x520.png)
+
+> $$
+> P(y=j \mid{x}) = \frac{e^{x^{T}w_{j}}}{\sum^{K}_{k=1}e^{x^{T}wk}}
+> $$
+>![softmax](https://production-media.paperswithcode.com/methods/Screen_Shot_2020-05-23_at_11.56.35_PM_yh1VO82.png)
+
+#### Cross entropy
+
+cost function
+
+$$
+    \text{cost} = -\frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}y_{k}^{(i)}\text{log}(\hat{p}_k^{(i)})
+$$
+
+When K=2, equivalent to the Logistic Regression's cost function (log loss)

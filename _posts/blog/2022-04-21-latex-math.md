@@ -37,3 +37,12 @@ hat
 $$
   \hat{p} = h_{\theta}(x) = \sigma(x^{T}\theta)
 $$
+
+$$
+\begin{equation}
+    \hat{y} = \begin{cases}
+        0 & \text{if}\ \hat{p} < 0.5 \\
+        1 & \text{if}\ \hat{p} \ge 0.5 \\
+    \end{cases}
+\end{equation}
+$$
