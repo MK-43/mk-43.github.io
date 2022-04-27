@@ -20,6 +20,8 @@ last_modified_at: 2022-04-26
 
 ### Linear Regression
 
+Assumption: the data is linear
+
 In practice, RMSE 대신 MSE 사용
 
 #### The normal equation
@@ -72,6 +74,7 @@ grid serach
 1. set a very large number of iterations  
 2. interrupt the algorithm when the gradient vector becomes tiny  
 
+<!-- TODO: fix it -->
 $
 |norm|<\epsilon
 $ &rarr; stop!
@@ -110,6 +113,8 @@ For non-linear model, add powers of each feature as new features
 
 plots of the model's performance on the training set and the validation set as a function of the training set size ➜ $f(\text{training set size})$
 
+#### Over-Fitting, Under-Fitting
+
 | |training data| validation data|
 |---|---|---|
 |overfitting|performs well|generalizes poorly|
@@ -120,6 +125,8 @@ plots of the model's performance on the training set and the validation set as a
 
 **overfitting**  
 ![overfitting](https://velog.velcdn.com/images/mk-43/post/5143b296-c028-443f-824b-a73856d6c5be/image.png)
+
+Refer to [Over-Fitting/Under-Fitting](../quest-for-ml/2022-04-26-quest-ch-2.md#over-fitting-under-fitting)
 
 > ❓ bias, variance, irreducible error
 
