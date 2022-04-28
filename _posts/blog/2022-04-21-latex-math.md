@@ -25,6 +25,7 @@ $$
     MAE(X,h) = \frac{1}{m}\sum_{i=1}^{m}{|{h(x^{(i)}) - y^{(i)}}|}
 $$
 
+Multiply, times
 $$
     F1 = \frac{2}{\frac{1}{precision} + \frac{1}{recall}} = 2\times \frac{precision\times recall}{precision + recall}
 $$
