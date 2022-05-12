@@ -1,5 +1,5 @@
 ---
-title:  "[perfect guide] text mining "
+title: "[perfect guide] text mining "
 excerpt: ""
 
 categories:
@@ -12,7 +12,7 @@ toc_sticky: true
 use_math: true
 
 date: 2022-04-28
-last_modified_at: 2022-04-28
+last_modified_at: 2022-05-12
 ---
 
 ## 텍스트 분석의 개요
@@ -35,7 +35,9 @@ last_modified_at: 2022-04-28
 
 문장을 개별 단어 별로 하나씩 토큰화 할 경우 문맥적인 의미가 무시될 수 있다.  
 n-gram은 연속된 n개의 단어를 하나의 토큰화 단위로 분리하는 것.  
-n개 단어로 윈도우를 만들어 토큰화 수행
+n개 단어로 윈도우를 만들어 토큰화 수행  
 
 Agent Smith knocks the door  
-`Agent Smith` `Smith knocks` `knocks the` `the door`
+`Agent Smith` `Smith knocks` `knocks the` `the door`  
+
+### NLTK
