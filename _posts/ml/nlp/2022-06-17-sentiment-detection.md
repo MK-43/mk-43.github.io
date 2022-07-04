@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
 
 date: 2022-06-17
-last_modified_at: 2022-07-01
+last_modified_at: 2022-07-04
 ---
 
 주파수의 높낮이: pitch  
@@ -62,6 +62,7 @@ the volume(얼마나 소리가 큰가 작은가)
 ### MFCC
 
 Mel-Frequency Cepstral Coefficient  
+a representation of the short-term power spectrum of a sound,  
 오디오에서 추출할 수 있는 피처로, 소리의 고유한 특징을 나타내는 수치  
 
 ### hamming
@@ -86,3 +87,13 @@ Classification problem ➜ CNN
 the passage or communication channel in which a sound signal is transported from the player source to the speaker  
 mono: one channel  
 stereo: two or more channels  
+
+## LabelEncoder
+
+수치화(레이블링) 하여 데이터를 다룸  
+
+## Fourier Series
+
+벡터가 직교한다 ➜ 내적이 0이 된다  
+
+함수 직교  
