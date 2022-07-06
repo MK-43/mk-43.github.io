@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
 
 date: 2022-06-17
-last_modified_at: 2022-07-04
+last_modified_at: 2022-07-06
 ---
 
 주파수의 높낮이: pitch  
@@ -43,10 +43,14 @@ a sample is taken at a particular time in the audio wave, recording **amplitude*
 
 an audio sample: a number representing the measured acoustic wave value at a specific point in time.  
 
-#### sampling rate(frequency)
+#### sampling rate(**sampling frequency**)
 
 the average number of samples obtained in one second.  
 e.g. 48 kHz = 48,000 samples per second  
+
+### frequency
+
+20Hz: 20 cycles a second  
 
 ### audio bit depth
 
@@ -94,6 +98,22 @@ stereo: two or more channels
 
 ## Fourier Series
 
+주기함수는 기저함수(sin, cos)의 선형조합으로 표현  
+
+#### 주기함수?
+
+$$  
+f(x+n*P) = f(x)  
+$$  
+
 벡터가 직교한다 ➜ 내적이 0이 된다  
 
 함수 직교  
+
+## Fourier transform
+
+https://twlab.tistory.com/55  
+
+## Fourier inversion
+
+reconstruct the original wave  
