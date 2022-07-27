@@ -1,0 +1,32 @@
+---
+title: "[cmake] Overview"
+excerpt: "Describe how to use cmake"
+
+categories:
+  - linux
+tags:
+  - [cmake]
+
+toc: true
+toc_sticky: true
+
+date: 2022-07-21
+last_modified_at: 2022-07-22
+---
+
+`SET` 변수 선언  
+
+`ADD_DEFINITIONS(-D<MACRO> -D<MACRO>=<value>)`: -D 추가  
+
+`FILE(<WRITE|APEEND|READ|>)`  
+
+`FILE(FILTER <list> <INCLUDE|EXCLUDE> REGEX <reg_ex>)` exclude every item  
+
+`add_subdirectory(<directory_name>)` sub dir의 cmakeFiles를 실행  
+
+`FILE(GLOB <relative_path> <globbing expression> )` expression에 부합하는 파일들을 찾아 리스트로  
+넘김  
+
+`file(GLOB all_srcs "./src/*.cpp")`  
+
+`add_executable(main ${all_srcs})` 실행파일 생성  

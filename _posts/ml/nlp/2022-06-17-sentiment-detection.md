@@ -11,7 +11,7 @@ toc: true
 toc_sticky: true
 
 date: 2022-06-17
-last_modified_at: 2022-07-06
+last_modified_at: 2022-07-21
 ---
 
 주파수의 높낮이: pitch  
@@ -34,6 +34,7 @@ Using prosody
 
 the reduction of a continuous-time signal to a discrete-time signal  
 a sound wave to a sequence of "samples"  
+![image](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Signal_Sampling.svg/600px-Signal_Sampling.svg.png)  
 
 ### sample
 
@@ -45,12 +46,12 @@ an audio sample: a number representing the measured acoustic wave value at a spe
 
 #### sampling rate(**sampling frequency**)
 
-the average number of samples obtained in one second.  
+the average number of samples obtained in **one second**.  
 e.g. 48 kHz = 48,000 samples per second  
 
 ### frequency
 
-20Hz: 20 cycles a second  
+20Hz: 20 cycles **a second**  
 
 ### audio bit depth
 
@@ -117,3 +118,12 @@ https://twlab.tistory.com/55
 ## Fourier inversion
 
 reconstruct the original wave  
+
+## FFT
+
+`n_fft(fft size)` 모든 주파수 성분을 계산하는 거싱 아니라 표본 개수를 정해 그만큼에 해당하는 영역만 계산  
+가령, sr=44100, n_fft=32면, 0, 44100/(32/1), 44100/(32/2), ... , 44100/(32/16) 최대 sampling rate의 절반까지 n_fft 등분하여 계산  
+
+## 위상
+
+주기적인 현상에서 사이클상의 위치(radian으로 표시)  

@@ -1,0 +1,24 @@
+---
+title: "[speaker recognition] overview"
+excerpt: ""
+
+categories:
+  - ml
+tags:
+  - [speaker recognition]
+
+toc: true
+toc_sticky: true
+use_math: true
+
+date: 2022-07-27
+last_modified_at: 2022-07-27
+---
+
+## Speaker Identification
+
+주어진 발언으로부터 화자를 찾아내는 기술  
+
+## Speaker Verification
+
+주어진 발언이 시스템에 등록된 사용자들의 목소리 중에 있는지  
