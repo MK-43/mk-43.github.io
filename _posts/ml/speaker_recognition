@@ -12,13 +12,40 @@ toc_sticky: true
 use_math: true
 
 date: 2022-07-27
-last_modified_at: 2022-07-27
+last_modified_at: 2022-07-29
 ---
 
-## Speaker Identification
+## Speaker Recognition
 
-주어진 발언으로부터 화자를 찾아내는 기술  
+### Speaker Identification
 
-## Speaker Verification
+(~~unknown speaker~~ 1:N)주어진 발언으로부터 화자를 찾아내는 기술  
+which voice in a group of known voices best matches the speaker([ref](https://wiki.aalto.fi/display/ITSP/Speaker+Recognition+and+Verification))  
+selects the best matched speaker's model among enrolled speaker models  
 
-주어진 발언이 시스템에 등록된 사용자들의 목소리 중에 있는지  
+### Speaker Verification(authentication)
+
+(between knowns. 1:1)주어진 발언이 시스템에 등록된 사용자들의 목소리 중에 있는지  
+
+- text-dependent: 사전에 화자가 어떤 text를 읽을지 알고 있음(하이 빅스비)
+- text-independent: 상대적으로 긴 utterance 필요
+
+## Speaker Detection
+
+verify the identify of a new speaker against a set of pretrained speaker models  
+
+## Speaker Separation
+
+겹치는 음성에 대해 분리  
+
+## Speaker Diarization
+
+find speech segments of the same speaker without any a priori knowledge  
+detect different speakers in an audio clip  
+토론에서 진행자와 패널 구분  
+전화에서 수신자, 발신자 구분  
+AI 스피커가 화자에 따라 다르게 동작  
+
+## clova
+
+https://clova.ai/speech#speaker_recognition_kr  
